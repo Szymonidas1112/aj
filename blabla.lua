@@ -16,7 +16,7 @@ if game.PlaceId == 5774073359 then
     while _G.Toggle do
     wait()
     while true do
-    wait(0)
+    wait(0.1)
     game:GetService("Players").LocalPlayer.Character.Combat.Attack:FireServer()
     end
     end
@@ -27,7 +27,7 @@ if game.PlaceId == 5774073359 then
     while _G.Toggle do
     wait()
     while true do
-    wait(0)
+    wait(0.1)
     game:GetService("Players").LocalPlayer.Character.Combat.Attack:FireServer()
     end
     end
