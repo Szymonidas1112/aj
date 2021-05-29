@@ -169,4 +169,41 @@ end
 end)
 Fly()
 end)
+TogglesSection:NewButton("Autoclicker", "Press  g to toggle", function()
+  local Key = "G"
+local AutoClickerData = Instance.new("ScreenGui")
+local Enabled = Instance.new("TextLabel")
+
+AutoClickerData.Name = "AutoClickerData"
+AutoClickerData.Parent = game.CoreGui
+
+Enabled.Name = "Enabled"
+Enabled.Parent = AutoClickerData
+Enabled.BackgroundColor3 = Color3.new(1, 1, 1)
+Enabled.Size = UDim2.new(0, 200, 0, 50)
+Enabled.Visible = false
+Enabled.Font = Enum.Font.SourceSans
+Enabled.Text = "nope"
+Enabled.TextColor3 = Color3.new(0, 0, 0)
+Enabled.TextSize = 14
+
+
+
+
+function onKeyPress(inputObject, gameProcessedEvent)
+   if inputObject.KeyCode == Enum.KeyCode[Key] then
+      if Enabled.Text == "nope" then
+  Enabled.Text = "yes"
+      while Enabled.Text == "yes" do
+    wait(0.01)
+mouse1click()
+end
+       else
+   Enabled.Text = "nope"
+end
+   end
+end
+
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+end)
 end
