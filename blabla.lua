@@ -58,4 +58,10 @@ end)
 PlayerSection:NewButton("Set Original WalkSpeed", "Sets walkspeed to original", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
+PlayerSection:NewSlider("JumpPower", "Changes jumppower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+PlayerSection:NewButton("Set Original JumpPower", "Sets jumppower to original", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
 end
