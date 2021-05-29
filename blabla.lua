@@ -170,7 +170,7 @@ end)
 Fly()
 end)
 TogglesSection:NewButton("Autoclicker", "Press  g to toggle", function()
-  local Key = "G"
+  local Key = "F2"
 local AutoClickerData = Instance.new("ScreenGui")
 local Enabled = Instance.new("TextLabel")
 
