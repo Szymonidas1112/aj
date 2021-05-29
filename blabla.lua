@@ -33,4 +33,21 @@ if game.PlaceId == 5774073359 then
     end
     end
 end)
+TeleportsSection:NewToggle("Toggle Rebirth", "Loop Rebirth", function(state)
+    if state then
+        _G.Toggle = true
+
+while _G.Toggle do
+wait(0.1)
+game.ReplicatedStorage.Rebirth:FireServer()
+end
+    else
+        _G.Toggle = false
+
+while _G.Toggle do
+wait(0.1)
+game.ReplicatedStorage.Rebirth:FireServer()
+end
+    end
+end)
 end
