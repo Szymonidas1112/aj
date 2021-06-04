@@ -8,7 +8,7 @@ if game.PlaceId == 5774073359 then
 }
 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Eat Shit Simulator", colors)
+    local Window = Library.CreateLib("Eat Sand Simulator AU", colors)
     local Tab = Window:NewTab("Main")
     local TeleportsSection = Tab:NewSection("Teleports")
     local TogglesSection = Tab:NewSection("Toggles")
