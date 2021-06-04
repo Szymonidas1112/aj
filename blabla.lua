@@ -1,6 +1,14 @@
 if game.PlaceId == 5774073359 then
+  local colors = {
+    SchemeColor = Color3.fromRGB(51, 0, 102),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(153, 50, 204),
+    ElementColor = Color3.fromRGB(0, 0, 0)
+}
+
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Eat Shit Simulator", "Sentinel")
+    local Window = Library.CreateLib("Eat Shit Simulator", colors)
     local Tab = Window:NewTab("Main")
     local TeleportsSection = Tab:NewSection("Teleports")
     local TogglesSection = Tab:NewSection("Toggles")
@@ -8,7 +16,7 @@ if game.PlaceId == 5774073359 then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ATM.CFrame
     end)
     TeleportsSection:NewButton("Chest", "Teleports to chest", function(v)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Chest.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gaame.Workspace.Chest.CFrame
     end)
     TogglesSection:NewToggle("TogglePunch", "Loop Punch", function(state)
     if state then
